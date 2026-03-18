@@ -1,5 +1,9 @@
 {
   "expo": {
+    "scheme": "shelfieapp",
+    "experiments": {
+      "typedRoutes": true
+    },
     "name": "react-native-course",
     "slug": "react-native-course",
     "version": "1.0.0",
@@ -28,7 +32,8 @@
     },
     "plugins": [
       "expo-asset",
-      "expo-font"
+      "expo-font",
+      "expo-router"
     ]
   }
 }
