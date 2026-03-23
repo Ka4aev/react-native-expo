@@ -16,8 +16,11 @@ const Home = () => {
         <Link className="underline" href="/login">
           <ThemedText>Login Page</ThemedText>
         </Link>
-        <Link className="underline" href="/contact">
+        <Link className="underline" href="/register">
           <ThemedText>Register Page</ThemedText>
+        </Link>
+        <Link className="underline" href="/profile">
+          <ThemedText>Profile Page</ThemedText>
         </Link>
       </ThemedView>
   )

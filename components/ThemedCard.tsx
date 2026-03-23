@@ -1,5 +1,5 @@
-import { View, useColorScheme  } from "react-native";
-import { Colors } from "../constants/Colors";
+import {View, useColorScheme, ViewStyle, StyleProp} from "react-native";
+import { Colors } from "@/constants/Colors";
 import { type PropsWithChildren, type FC } from "react"
 
 interface Props extends PropsWithChildren {

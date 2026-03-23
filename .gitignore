@@ -4,6 +4,7 @@
 node_modules/
 .claude
 .idea
+.serena
 # Expo
 .expo/
 dist/
