@@ -5,6 +5,7 @@ import { Spacer,ThemedText, ThemedView } from '@/components'
 const Books = () => {
   return (
       <ThemedView safe style={styles.container}>
+        <Spacer />
         <ThemedText title style={styles.heading}>
           Your Reading List
         </ThemedText>
