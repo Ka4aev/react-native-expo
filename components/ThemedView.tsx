@@ -1,9 +1,9 @@
-import { useColorScheme, View } from "react-native";
+import { useColorScheme, View, ViewProps } from "react-native";
 import { useSafeAreaInsets} from "react-native-safe-area-context";
 import { Colors } from "@/constants/Colors";
 import { type PropsWithChildren, type FC } from "react"
 
-interface Props extends PropsWithChildren {
+interface Props extends PropsWithChildren, Pick<ViewProps, 'pointerEvents'> {
   style?: any,
   safe?: boolean
 }
