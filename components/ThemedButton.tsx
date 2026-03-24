@@ -3,7 +3,7 @@ import {FC, PropsWithChildren} from "react";
 import { Colors } from '@/constants/Colors'
 
 interface Props extends PropsWithChildren {
-  style?: StyleProp<ViewStyle>;
+  style?: any;
   onPress?: () => void;
 }
 

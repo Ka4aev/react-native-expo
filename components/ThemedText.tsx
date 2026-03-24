@@ -3,7 +3,7 @@ import {StyleProp, Text, useColorScheme, ViewStyle} from 'react-native'
 import { Colors } from '@/constants/Colors'
 
 interface Props extends PropsWithChildren{
-  style?: StyleProp<ViewStyle>,
+  style?: any,
   title?: boolean
 }
 const ThemedText: FC<Props> = ({ style, title = false, ...props }) => {

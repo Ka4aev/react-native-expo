@@ -3,7 +3,7 @@ import { Colors } from "@/constants/Colors";
 import { type PropsWithChildren, type FC } from "react"
 
 interface Props extends PropsWithChildren {
-  style?: StyleProp<ViewStyle>,
+  style?: any,
 }
 
 const ThemedCard: FC<Props> = ({ style, ...props }) => {

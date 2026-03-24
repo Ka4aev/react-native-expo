@@ -1,18 +1,33 @@
-import {View, useColorScheme, StyleProp, ViewStyle} from "react-native";
+import { useColorScheme, View } from "react-native";
+import { useSafeAreaInsets} from "react-native-safe-area-context";
 import { Colors } from "@/constants/Colors";
 import { type PropsWithChildren, type FC } from "react"
 
 interface Props extends PropsWithChildren {
-  style?: StyleProp<ViewStyle>,
+  style?: any,
+  safe?: boolean
 }
 
-const ThemedView: FC<Props> = ({ style, ...props }) => {
+const ThemedView: FC<Props> = ({ style, safe = false ,...props }) => {
   const colorScheme = useColorScheme();
   const theme = Colors[colorScheme ?? "light"];
 
+  if (!safe) return (
+      <View
+          style={[{ backgroundColor: theme.background }, style]}
+          {...props}
+      />
+  )
+  const insets = useSafeAreaInsets()
   return (
       <View
-          style={[{ backgroundColor: theme.background}, style]}
+          style={[{
+            backgroundColor: theme.background,
+            paddingTop: insets.top,
+            paddingBottom: insets.bottom,
+          },
+            style
+          ]}
           {...props}
       />
   )
